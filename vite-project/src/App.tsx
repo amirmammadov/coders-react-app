@@ -1,17 +1,18 @@
-import Card from "./components/Card/Card";
-
 import styles from "./App.module.scss";
 
-import { persons } from "./data/persons";
+import { questions } from "./data/questions";
+
+import Question from "./components/Question";
 
 const App = () => {
   return (
     <div className={styles.container}>
-      {persons.map((person) => {
-        return (
-          <Card key={person.id} img={person.imgUrl} text={person.personName} />
-        );
-      })}
+      <div className={styles.title}>Questions</div>
+      <div className={styles.content}>
+        {questions.map((question) => {
+          return <Question key={question.id} {...question} />;
+        })}
+      </div>
     </div>
   );
 };

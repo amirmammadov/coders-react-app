@@ -1,6 +1,26 @@
 .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 90px auto;
+  width: 60%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   gap: 20px;
-  width: 100%;
+
+  .title {
+    font-size: 40px;
+    color: #334155;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
 }
